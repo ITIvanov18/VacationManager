@@ -1,4 +1,4 @@
-package com.itivanov18.vacationmanager;
+package com.itivanov18.vacationmanager.Model;
 
 public class Users {
 
