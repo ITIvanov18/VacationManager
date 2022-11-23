@@ -1,12 +1,112 @@
 h1 {
-    font-size:50px;
-    color: white }
+    font-size:70px;
+    font-family: "Times New Roman", Times, serif;
+    color: #51087E;
+}
+div.transbox {
+    background-color: #ffffff;
+    border: 1px solid black;
+    position: relative;
+    opacity: 0.6;
+    repeat: no-repeat;
+}
 
 body {
 
-    background-image:url("https://www.pixelstalk.net/wp-content/uploads/images6/Chill-HD-Wallpaper-Free-download.jpg");
+    background-image: url(../Images/background2.jpg);
     background-repeat: no-repeat;
+    background-position: bottom;
     background-attachment: fixed;
     background-size: 100% 100%;
 
 }
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center ;
+    padding: 30px;
+}
+
+.logo{
+    cursor: pointer;
+    margin-right: auto;
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.nav__links{
+    list-style: none;
+
+}
+
+.nav__links li{
+    display: inline-block;
+    padding: 0px 30px;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover{
+    color: rgba(2, 173, 212, 0.8);
+}
+
+button{
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgba(3, 190, 238, 0.8);
+    border:none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: rgba(0,136,169,0.8);
+}
+.accountButtons{
+    padding: 16px 32px;
+    margin: 20px 60px;
+}
+.Loginbutton {
+    position: relative;
+    border: none;
+    color: rgba(0,136,169,0.8);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 56px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: rgba(3, 190, 238, 0.8);
+    color: #ffffff;
+    border: 2px solid #085975;
+    border-radius: 10px;
+}
+.Loginbutton:hover {
+    background-color: rgba(0,136,169,0.8);
+    color: rgba(255, 255, 255, 0.8);
+}
+.Registerbutton:hover {
+    background-color: rgba(1, 98, 47, 0.8);
+    color: rgba(255, 255, 255, 0.8);
+}
+.Registerbutton {
+    position: relative;
+    border: none;
+    color: rgba(0,136,169,0.8);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 56px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: rgba(2, 134, 65, 0.8);
+    color: #ffffff;
+    border: 2px solid rgba(1, 98, 47, 0.8);
+    border-radius: 10px;
+}
+
+
