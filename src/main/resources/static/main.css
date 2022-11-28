@@ -45,11 +45,11 @@ header{
     padding: 0px 30px;
 }
 
-.nav__links li a{
+.nav__links li button{
     transition: all 0.3s ease 0s;
 }
 
-.nav__links li a:hover{
+.nav__links li button:hover{
     color: rgba(2, 173, 212, 0.8);
 }
 
@@ -66,47 +66,94 @@ button{
 button:hover{
     background-color: rgba(0,136,169,0.8);
 }
-.accountButtons{
-    padding: 16px 32px;
-    margin: 20px 60px;
+
+body {
+    font-family: sans-serif;
+    background-color: #81d4fa;
+    font-weight: bold;
+
 }
-.Loginbutton {
-    position: relative;
-    border: none;
-    color: rgba(0,136,169,0.8);
+.vertical-center-login {
+    margin: 0;
+    position: absolute;
+    top: 55%;
+    left: 45%;
+}
+
+.vertical-center-register {
+    margin: 0;
+    position: absolute;
+    top: 70%;
+    left: 44%;
+}
+
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 50px 100px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after {
+    content: "";
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 56px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    background-color: rgba(3, 190, 238, 0.8);
-    color: #ffffff;
-    border: 2px solid #085975;
-    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
 }
-.Loginbutton:hover {
-    background-color: rgba(0,136,169,0.8);
-    color: rgba(255, 255, 255, 0.8);
+
+.btn-white::after {
+    background-color: #fff;
 }
-.Registerbutton:hover {
-    background-color: rgba(1, 98, 47, 0.8);
-    color: rgba(255, 255, 255, 0.8);
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
 }
-.Registerbutton {
-    position: relative;
-    border: none;
-    color: rgba(0,136,169,0.8);
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 56px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    background-color: rgba(2, 134, 65, 0.8);
-    color: #ffffff;
-    border: 2px solid rgba(1, 98, 47, 0.8);
-    border-radius: 10px;
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 

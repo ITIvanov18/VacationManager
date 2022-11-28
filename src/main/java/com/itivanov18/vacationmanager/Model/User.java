@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table
-public class Users {
+public class User {
 
     @Id
     @GeneratedValue
@@ -22,7 +22,7 @@ public class Users {
     @Column
     private String lastName;
 
-    public Users(String nickname, String password, String firstName, String lastName, String role, String team) {
+    public User(String nickname, String password, String firstName, String lastName, String role, String team) {
         this.nickname = team;
         this.password = role;
         this.firstName = nickname;
