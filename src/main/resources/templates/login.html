@@ -1,10 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link href="css/register.css" rel="stylesheet" type="text/css">
 </head>
+
+<style>  body {
+    background: url("https://cdn.pixabay.com/photo/2016/10/29/10/12/purple-1780371_960_720.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+</style>
 <body>
+
+<center><form action="/login" method="get">
+
+    <h1 style="color: #ffffff">Login</h1>
+
+    <fieldset>
+        <label for="nick_name" style="color: #ffffff">NickName:</label>
+        <input type="text" id="nick_name" name="nickname">
+        <label for="password" style="color: #ffffff">Password:</label>
+        <input type="password" id="password" name="password">
+    </fieldset>
+    <button type="submit">Login</button>
+
+</form></center>
+<center><form action="/index" method="get"><button>Return</button></form></center>
+</body>
+</html>
 
 </body>
 </html>
