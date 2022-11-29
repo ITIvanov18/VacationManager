@@ -1,24 +1,23 @@
 package com.itivanov18.vacationmanager.Controller;
-import com.example.vacationmanager.model.User;
+import com.itivanov18.vacationmanager.Model.User;
 import com.itivanov18.vacationmanager.data_access_object.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 @Controller
-public class userController {
+public class UserController {
 
     @Autowired
-    UserRepository UserRepo;
-    @Autowired
-    userService service;
+    UserRepository userRepo;
+
     User loggedUser;
 
     @GetMapping("/index")
     public String index(){
         return "index";
     }
-    @GetMapping("/goTologinPage")
+    @GetMapping("/goToLogin")
     public String loginPage(){
         return "login";
     }
@@ -46,6 +45,8 @@ public class userController {
         model.addAttribute("users", userRepo.findAll());
         return "allUsers";
     }
+
+    /*
     @GetMapping(value="/login")
     public String getUserByUsernameAndPassword(@ModelAttribute User user, Model model) {
         User loggedUser = userRepo.findByNicknameAndPassword(user.getNickname(), user.getPassword());
@@ -57,5 +58,5 @@ public class userController {
             return "developer";
         }
         return "view";
-    }
+    }*/
 }

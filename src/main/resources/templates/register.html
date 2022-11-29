@@ -5,9 +5,7 @@
   <title>Vacation Manager</title>
   <link href="css/register.css" rel="stylesheet" type="text/css">
   <script src="js/register.js"></script>
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 <body>
 
@@ -15,37 +13,111 @@
   <h2 class="register-heading">REGISTER</h2>
 </center>
 
-<form action="/register" method="post">
-  <label for="firstName" style="display: block;">
-    <p class="label-txt">ENTER YOUR FIRST NAME</p>
-    <input id="firstName" name="firstName" type="text" class="input" style="color: white" required>
-    <div class="line-box">
-      <div class="line"></div>
+<ul class="nav">
+  <li onclick="showLogin()">Login</li>
+  <li onclick="showSignup()">Sign up</li>
+</ul>
+<div class="wrapper">
+  <div class="rec-prism">
+    <div class="face face-top">
+      <div class="content">
+        <h2>Subscribe</h2>
+        <small>Enter your email so we can send you the latest updates!</small>
+        <form onsubmit="event.preventDefault()">
+          <div class="field-wrapper">
+            <input type="text" name="email" placeholder="email">
+            <label>e-mail</label>
+          </div>
+          <div class="field-wrapper">
+            <input type="submit" onclick="showThankYou()">
+          </div>
+        </form>
+      </div>
     </div>
-  </label>
-  <label for="lastName" style="display: block;">
-    <p class="label-txt">ENTER YOUR LAST NAME</p>
-    <input id="lastName" name="lastName" type="text" class="input" style="color: white" required>
-    <div class="line-box">
-      <div class="line"></div>
+    <div class="face face-front">
+      <div class="content">
+        <h2>Sign in</h2>
+        <form onsubmit="event.preventDefault()">
+          <div class="field-wrapper">
+            <input type="text" name="username" placeholder="username">
+            <label>username</label>
+          </div>
+          <div class="field-wrapper">
+            <input type="password" name="password" placeholder="password" autocomplete="new-password">
+            <label>password</label>
+          </div>
+          <div class="field-wrapper">
+            <input type="submit" onclick="showThankYou()">
+          </div>
+          <span class="signup" onclick="showSignup()">Not a user?  Sign up</span>
+        </form>
+      </div>
     </div>
-  </label>
-  <label for="nickname" style="display: block;">
-    <p class="label-txt">ENTER YOUR NICKNAME</p>
-    <input id="nickname" name="nickname" type="text" class="input" style="color: white" required>
-    <div class="line-box">
-      <div class="line"></div>
+    <div class="face face-back">
+      <div class="content">
+        <small>Enter your email so we can send you a reset link for your password</small>
+        <form onsubmit="event.preventDefault()">
+          <div class="field-wrapper">
+            <input type="text" name="email" placeholder="email">
+            <label>e-mail</label>
+          </div>
+          <div class="field-wrapper">
+            <input type="submit" onclick="showThankYou()">
+          </div>
+        </form>
+      </div>
     </div>
-  </label>
-  <label for="password" style="display: block;">
-    <p class="label-txt">ENTER YOUR PASSWORD</p>
-    <input id="password" name="password" type="text" class="input" style="color: white" required>
-    <div class="line-box">
-      <div class="line"></div>
+    <div class="face face-right">
+      <div class="content">
+        <h2>Sign up</h2>
+        <form onsubmit="event.preventDefault()">
+          <div class="field-wrapper">
+            <input type="text" name="email" placeholder="email">
+            <label>e-mail</label>
+          </div>
+          <div class="field-wrapper">
+            <input type="password" name="password" placeholder="password" autocomplete="new-password">
+            <label>password</label>
+          </div>
+          <div class="field-wrapper">
+            <input type="password" name="password2" placeholder="password" autocomplete="new-password">
+            <label>re-enter password</label>
+          </div>
+          <div class="field-wrapper">
+            <input type="submit" onclick="showThankYou()">
+          </div>
+          <span class="singin" onclick="showLogin()">Already a user?  Sign in</span>
+        </form>
+      </div>
     </div>
-  </label>
-  <button type="submit">submit</button>
-</form>
-
-</body>
-</html>
+    <div class="face face-left">
+      <div class="content">
+        <h2>Contact us</h2>
+        <form onsubmit="event.preventDefault()">
+          <div class="field-wrapper">
+            <input type="text" name="name" placeholder="name">
+            <label>Name</label>
+          </div>
+          <div class="field-wrapper">
+            <input type="text" name="email" placeholder="email">
+            <label>e-mail</label>
+          </div>
+          <div class="field-wrapper">
+            <textarea placeholder="your message"></textarea>
+            <label>your message</label>
+          </div>
+          <div class="field-wrapper">
+            <input type="submit" onclick="showThankYou()">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="face face-bottom">
+      <div class="content">
+        <div class="thank-you-msg">
+          Thank you!
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

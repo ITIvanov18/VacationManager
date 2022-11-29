@@ -1,6 +1,7 @@
 package com.itivanov18.vacationmanager.Model;
-import javax.persistence.*;
 
+
+import javax.persistence.*;
 
 @Entity
 @Table
@@ -29,6 +30,10 @@ public class User {
         this.lastName = password;
         this.role = firstName;
         this.team = lastName;
+    }
+
+    public User() {
+
     }
 
     public String getNickname() {
