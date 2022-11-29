@@ -1,9 +1,9 @@
-// Dimensions
-$prism-height: 350px;
-$prism-length: 250px;
-$prism-depth: $prism-length;
-$spacing: 20px;
-$br: 3px;
+//Dimensions
+prism-height: 350px;
+prism-length: 250px;
+prism-depth: $prism-length;
+spacing: 20px;
+br: 3px;
 
 // Colors
 $text-light: #fff;
